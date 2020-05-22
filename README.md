@@ -1,2 +1,0 @@
-# JobListingCodeSand
-Created with CodeSandbox
