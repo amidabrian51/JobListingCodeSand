@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import JobList from "../job-list/job-listings.component";
-import SearchBox from "../search-box/search-box.component";
+
 import "./jobs.styles.css";
 
 class Jobs extends Component {
@@ -19,14 +19,14 @@ class Jobs extends Component {
   }
 
   render() {
-    const { jobs, searchJobs } = this.state;
-    const filterJobs = jobs.filter(job =>
-      job.company.toLowerCase().includes(searchJobs.toLowerCase())
-    );
+    // const { jobs, searchJobs } = this.state;
+    // const filterJobs = jobs.filter(job =>
+    //   job.company.toLowerCase().includes(searchJobs.toLowerCase())
+    // );
     return (
       <div>
         <div className="Input">
-          <SearchBox
+          {/* <SearchBox
             className="SearchMode"
             type="searchJob"
             placeholder="Search Tech"
@@ -35,10 +35,10 @@ class Jobs extends Component {
                 searchJobs: e.target.value
               })
             }
-          />
+          /> */}
         </div>
         <h1>Here is my Job Listings Page</h1>
-        <JobList jobs={filterJobs} />
+        <JobList jobs={this.state.jobs} />
       </div>
     );
   }
