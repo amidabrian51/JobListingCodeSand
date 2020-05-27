@@ -8,9 +8,11 @@ class Jobs extends Component {
     super(props);
     this.state = {
       jobs: [],
-      searchJobs: ""
+      filterItems: []
     };
   }
+
+  
 
   componentDidMount() {
     fetch("./data.json")
