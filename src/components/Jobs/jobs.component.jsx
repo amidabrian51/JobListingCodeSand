@@ -8,10 +8,7 @@ class Jobs extends Component {
     super(props);
     this.state = {
       jobs: [],
-      tags: {
-        hidden: true,
-        addedTags: []
-      }
+      filterItems:[]
   }
 
 }
