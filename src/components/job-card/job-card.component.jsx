@@ -2,6 +2,8 @@ import React from "react";
 import CustomButton from "../custom-button/custom-button.component";
 import "./job-card.styles.css";
 
+
+
 const JobCard = ({
   company,
   position,
@@ -16,11 +18,12 @@ const JobCard = ({
   level,
   tools=[],
   id
-}
-const tags = [role, level, …tools, …languages]
+},
+
 ) => 
 
-(  
+( 
+  const tags = [role, level, …tools, …languages]
   <div className="container">
     <div className="card">
       <div className="companyName">
