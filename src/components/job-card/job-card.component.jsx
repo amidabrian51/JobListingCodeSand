@@ -14,10 +14,10 @@ const JobCard = ({
   languages = [],
   role,
   level,
-  tools,
+  tools=[],
   id
 }
-
+const tags = [role, level, …tools, …languages]
 ) => 
 
 (  
@@ -35,11 +35,8 @@ const JobCard = ({
         <div className="jobNames">
           <h1>{position}</h1>
           <div className="techNames">
-            {
-            
-            languages &&
-              languages.map((language, id) => (
-                <CustomButton key={id}> {language}</CustomButton>
+            {tags && tags.map((tag, id) => (
+                <CustomButton key={id}> {tag}</CustomButton>
               ))}
           </div>
         </div>
