@@ -14,13 +14,12 @@ const JobCard = ({
   languages = [],
   role,
   level,
-  tools=[],
+  tools,
   id
-}
-const tags = [role, level, …tools, …languages]
-) => 
+}) => {
+const tags = [level, role, …tools, …languages];
 
-(  
+return (  
   <div className="container">
     <div className="card">
       <div className="companyName">
@@ -35,8 +34,11 @@ const tags = [role, level, …tools, …languages]
         <div className="jobNames">
           <h1>{position}</h1>
           <div className="techNames">
-            {tags && tags.map((tag, id) => (
-                <CustomButton key={id}> {tag}</CustomButton>
+            {
+            
+            languages &&
+              languages.map((language, id) => (
+                <CustomButton key={id}> {language}</CustomButton>
               ))}
           </div>
         </div>
@@ -48,6 +50,7 @@ const tags = [role, level, …tools, …languages]
       </div>
     </div>
   </div>
-);
+)
+};
 
 export default JobCard;
