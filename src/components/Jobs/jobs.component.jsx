@@ -8,11 +8,13 @@ class Jobs extends Component {
     super(props);
     this.state = {
       jobs: [],
-      filterItems: []
-    };
+      tags: {
+        hidden: true,
+        addedTags: []
+      }
   }
 
-  
+}
 
   componentDidMount() {
     fetch("./data.json")
@@ -27,18 +29,6 @@ class Jobs extends Component {
     // );
     return (
       <div>
-        <div className="Input">
-          {/* <SearchBox
-            className="SearchMode"
-            type="searchJob"
-            placeholder="Search Tech"
-            handlechange={e =>
-              this.setState({
-                searchJobs: e.target.value
-              })
-            }
-          /> */}
-        </div>
         <h1>Here is my Job Listings Page</h1>
         <JobList jobs={this.state.jobs} />
       </div>
